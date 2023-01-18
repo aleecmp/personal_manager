@@ -1,0 +1,49 @@
+:root {
+    --color-primary: ;
+    --color-text: #666;
+    --font-main: Questrial;
+    --font-secondary: Neuton;
+    --font-text: Arimo;
+}
+
+/* Main Settings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-familiy: var(--font-text);
+    color: var(--color-text);
+}
+
+@font-face {
+    font-family: Questrial;
+    src: url('../fonts/Questrial-Regular.ttf');
+}
+
+@font-face {
+    font-family: Neuton;
+    src: url('../fonts/Neuton-Regular.ttf');
+}
+
+@font-face {
+    font-family: Arimo;
+    src: url('../fonts/Arimo-VariableFont_wght.ttf');
+}
+
+h1 {
+    font-family: var(--font-main);
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: var(--font-secondary);
+}
+
+/* End Main Settings */
+
+/* Layout Settings */
+
+/* End Layout Settings */
+
+
+
