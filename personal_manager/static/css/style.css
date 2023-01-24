@@ -172,10 +172,12 @@ main {
     text-decoration: none;
 }
 
-
+.alert-success {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(14,97,69);
+    color: white;
+}
 
 
 /* End Layout Settings */
-
-
-
