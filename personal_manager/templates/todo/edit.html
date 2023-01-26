@@ -1,6 +1,6 @@
 {% extends 'layout/base.html' %}
 
-{% block 'tittle' %} Create todo {% endblock %}
+{% block 'tittle' %} Edit ToDo {% endblock %}
 
 {% block 'styles' %}
 {% load static %}
@@ -17,7 +17,7 @@
 {% endif %}
 
 <span class='aux-btns-form'><a href="{% url 'todo' %}">Back</a></span>
-<form action="{% url 'todo_create' %}" method='POST'>
+<form action="{% url 'todo_edit' id=id %}" method='POST'>
     {% csrf_token %}
     <table>
         {{ form.as_table }}

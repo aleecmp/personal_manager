@@ -1,0 +1,23 @@
+{% extends 'layout/base.html' %}
+
+{% block 'tittle' %} ToDos {% endblock %}
+
+{% block 'content' %}
+<h1>ToDos</h1>
+<form class='search' action="{% url 'todo' %}" method='GET'>
+    <input type='text' name='search' class='search-bar' placeholder='search todo...'>
+    <input type='submit' value='Search' class='btn btn-search'>
+</form>
+<span class='aux-btns'><a href="{% url 'todo' %}">View All</a> <a href="{% url 'todo_create' %}">Add</a></span>
+<ul class='list'>
+    {% for todo in todos %}
+    <li>{{ todo }}
+        <span>
+            <a href="{% url 'todo_view' id=todo.id  %}" class='btn btn-detail'>View</a>
+            <a href="{% url 'todo_edit' id=todo.id  %}" class='btn btn-edit'>Edit</a>
+            <a href="{% url 'todo_delete' id=todo.id %}" class='btn btn-delete'>Delete</a>
+        </span>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
