@@ -5,4 +5,8 @@
 {% block 'content' %}
 
 <h1>Welcome to your personal manager</h1>
+<div class="cards">
+        <a href="{% url 'contact' %}" class="card">Contacts</a>  
+        <a href="{% url 'todo' %}" class="card">ToDos</a>
+</div>
 {% endblock %}

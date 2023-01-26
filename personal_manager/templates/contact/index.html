@@ -3,6 +3,7 @@
 {% block 'tittle' %} Contacts {% endblock %}
 
 {% block 'content' %}
+<h1>Contacts</h1>
 <form class='search' action="{% url 'contact' %}" method='GET'>
     <input type='text' name='search' class='search-bar' placeholder='search contact...'>
     <input type='submit' value='Search' class='btn btn-search'>
