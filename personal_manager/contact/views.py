@@ -34,7 +34,7 @@ def edit(request, id):
 
         context = {"form": form, "id": id}
 
-        messages.success(request, "Contact detail updated")
+        messages.success(request, "Contact updated")
         return render(request, "contact/edit.html", context)
 
 
@@ -47,7 +47,13 @@ def create(request):
 
     if request.method == "POST":
         form = ContactForm(request.POST)
-        if form.is_valid:
+        if form.is_valid():
             form.save()
 
         return redirect("contact")
+
+
+def delete(request, id):
+    contact = Contact.objects.get(id=id)
+    contact.delete()
+    return redirect("contact")
