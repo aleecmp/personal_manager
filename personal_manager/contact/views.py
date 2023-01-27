@@ -4,9 +4,12 @@ from .forms import ContactForm
 from django.contrib import messages
 
 
-def index(request):
-    search = request.GET.get("search", "")
-    contacts = Contact.objects.filter(name__icontains=search)
+def index(request, letter=None):
+    if letter != None:
+        contacts = Contact.objects.filter(name__istartswith=letter)
+    else:
+        search = request.GET.get("search", "")
+        contacts = Contact.objects.filter(name__icontains=search)
     context = {"contacts": contacts}
     return render(request, "contact/index.html", context)
 
