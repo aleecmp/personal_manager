@@ -76,7 +76,7 @@ main {
     display: flex;
     flex-direction: column;
     width: 100vw;
-    margin: 50px;
+    margin-top: 50px;
     justify-content: flex-start;
     align-items: center;
 }
@@ -178,6 +178,24 @@ main {
     background-color: rgb(14,97,69);
     color: white;
 }
+
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    padding: 20px 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .social a {
+    color: #fff;
+    margin-right: 10px;
+    text-decoration: none;
+  }
+  
+  
 
 
 /* End Layout Settings */
