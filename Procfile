@@ -1,1 +1,1 @@
-web: gunicorn personal_manager.wsgi --log-file -
+web: gunicorn personal_manager.wsgi:application --log-file -
