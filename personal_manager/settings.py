@@ -34,7 +34,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ["personal-manager.up.railway.app", "127.0.0.1"]
 
-CSRF_TRUSTED_ORIGINS = ["personal-manager.up.railway.app"]
+CSRF_TRUSTED_ORIGINS = ["https://personal-manager.up.railway.app"]
 
 # Application definition
 
